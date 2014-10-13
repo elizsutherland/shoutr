@@ -7,8 +7,7 @@ class ShoutsController < ApplicationController
   end
 
   def create
-   # Shout.create(user_id: current_user.id, body:params[:shout][:body])
-    current_user.shout.create(shout.params)
+    current_user.shouts.create(shout_params)
     redirect_to shouts_path
   end
 
