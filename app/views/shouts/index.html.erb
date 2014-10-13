@@ -5,6 +5,16 @@
   <%= form.submit "SHOUT!" %>
 <% end %>
 
+<div>
+  <ul>
+  <% @users.each do |user| %>
+   <li>
+     <%= user.email %> <%= button_to "Follow", [user, @following_relationship] %>
+   </li>
+  <% end %>
+  </ul>
+</div>
+
 <ul>
   <% @shouts.each do |shout| %>
     <li><%= shout.body %></li>
