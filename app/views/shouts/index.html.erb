@@ -9,7 +9,7 @@
   <ul>
   <% @users_i_do_not_follow.each do |user| %>
    <li>
-     <%= user.email %> <%= button_to "Follow", [user, @following_relationship] %>
+     <%= user.email %> <%= button_to "Follow", [user, :following_relationship] %>
    </li>
   <% end %>
   </ul>
