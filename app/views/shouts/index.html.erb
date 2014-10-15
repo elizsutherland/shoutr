@@ -5,6 +5,11 @@
   <%= form.submit "SHOUT!" %>
 <% end %>
 
+<%= form_for @image_subject do |form| %>
+  <%= form.text_field :url %>
+  <%= form.submit "IMAGE!" %>
+<% end %>
+
 <ul>
 <%= render @timeline %>
 </ul>
