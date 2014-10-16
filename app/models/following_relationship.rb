@@ -1,6 +1,6 @@
 class FollowingRelationship < ActiveRecord::Base
-  belongs_to :followed_user, class_name: "User"
-  belongs_to :follower, class_name: "User"
+  belongs_to :followed_user, class_name: "User", dependent: :destroy
+  belongs_to :follower, class_name: "User", dependent: :destroy
 
   validate:user_is_not_following_themself
 
